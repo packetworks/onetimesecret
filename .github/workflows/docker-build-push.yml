@@ -6,6 +6,7 @@ on:
   push:
     branches:    
       - 'main'
+      - 'develop'
       - 'gitsync'
 
 jobs:
@@ -15,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: main
+          ref: develop
         
       - name: Docker meta
         id: docker_meta
