@@ -6,9 +6,7 @@ name: 'Build and publish docker images (all platforms)'
 on:
   push:
     branches:    
-      - 'main'
-      - 'develop'
-      - 'gitsync'
+      - '**'
 
 jobs:
   release:
