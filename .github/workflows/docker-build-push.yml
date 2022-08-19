@@ -62,14 +62,14 @@ jobs:
           tags: ${{ secrets.DOCKER_HUB_REPO }}:latest 
           labels: ${{ steps.docker_meta.outputs.labels }}
                    
-      - # copy multiplatform image from dockerhub to quay and ghcr
-        name: Push Image to multiple registries
-        uses: akhilerm/tag-push-action@v2.0.0
-        with:
-          src: |
-            docker.io/${{ secrets.DOCKER_HUB_REPO }}:latest
-          dst: |
-            quay.io/${{ secrets.DOCKER_HUB_REPO }}:latest
+#      - # copy multiplatform image from dockerhub to quay and ghcr
+#        name: Push Image to multiple registries
+#        uses: akhilerm/tag-push-action@v2.0.0
+#        with:
+#          src: |
+#            docker.io/${{ secrets.DOCKER_HUB_REPO }}:latest
+#          dst: |
+#            quay.io/${{ secrets.DOCKER_HUB_REPO }}:latest
           # quay.io/user/app:1.0.0
           # ghcr.io/${{ secrets.DOCKER_TAG }}:latest
           # ghcr.io/user/app:1.0.0
